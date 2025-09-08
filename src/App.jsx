@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-    const  [value,setValue]= useState(0);
+    const  [value,setValue]= useState(" ");
     const [weatherobj,setweatherobj] = useState({
      temp:"--",
      location:"--",
@@ -66,7 +66,7 @@ function App() {
             placeholder="Enter Location" 
             className="text-white text-lg bg-transparent outline-none py-[1rem] px-0 
              border-b-2 border-white w-[84%]" onChange={handleInput} />
-            <button id="search" className="bg-[#44ad96] text-lg border-none py-4 px-8 cursor-pointer"  onClick={handleClick}>Search</button>
+            <button id="search" className="bg-[#44ad96] text-lg border-none py-4 px-8 cursor-pointer" value={value}  onClick={handleClick}>Search</button>
         </div>
     </header>
     <main className="flex items-center justify-center text-white bg-[#01161E] h-[calc(100vh-150px)]">
